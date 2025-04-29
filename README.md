@@ -111,7 +111,7 @@ Please see `CONTRIBUTING.md` (to be added) for guidelines.
 
 We would like to thank the following individuals for their contributions to this project:
 
-- **@argeolog_** - For providing the original idea and inspiration via their [tweet](https://x.com/argeolog_/status/1916237137604981163). Their work on the "Düdüğüm" app, a React Native application for earthquake alerts, inspired this project.
+- **Argeolog** - For providing the original idea and inspiration via their [tweet](https://x.com/argeolog_/status/1916237137604981163). Their work on the "Düdüğüm" app, a React Native application for earthquake alerts, inspired this project.
 
 - **Mehmet Turgay AKALIN** - [GitHub Profile](https://github.com/makalin)  
   Developer, creator of SONUS and SonoLink protocol.  
