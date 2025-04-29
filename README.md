@@ -88,6 +88,13 @@ LICENSE
 
 ---
 
+## 🚀 Project Status
+
+> **Currently in early active development.**  
+> Early beta versions expected soon!
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome!  
@@ -100,28 +107,13 @@ Please see `CONTRIBUTING.md` (to be added) for guidelines.
 
 ---
 
-## 🛡 License
-
-MIT License  
-Feel free to fork, build, improve, and save lives.
-
----
-
-## 🚀 Project Status
-
-> **Currently in early active development.**  
-> Early beta versions expected soon!
-
----
-
 ## 👨‍💻 Contributors
 
 We would like to thank the following individuals for their contributions to this project:
 
 - **@argeolog_** - For providing the original idea and inspiration via their [tweet](https://x.com/argeolog_/status/1916237137604981163). Their work on the "Düdüğüm" app, a React Native application for earthquake alerts, inspired this project.
 
-- **Mehmet Turgay AKALIN**  
-  [GitHub Profile](https://github.com/makalin)  
+- **Mehmet Turgay AKALIN** - [GitHub Profile](https://github.com/makalin)  
   Developer, creator of SONUS and SonoLink protocol.  
   Focused on building open, resilient, and innovative systems for real-world problems.
   
@@ -129,6 +121,13 @@ We would like to thank the following individuals for their contributions to this
 
 ## How to Contribute
 If you'd like to contribute to this project, please check out our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
+
+---
+
+## 🛡 License
+
+MIT License  
+Feel free to fork, build, improve, and save lives.
 
 ---
 
