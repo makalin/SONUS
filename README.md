@@ -1,134 +1,122 @@
-# 🎵 SONUS
+# SONUS - Emergency Communication App
 
-**The Sound of Survival** — An innovative earthquake whistle & SOS app that **communicates using sound** when everything else fails.
+![SONUS Logo](sonus_logo.svg)
 
----
+SONUS is a cross-platform application that enables emergency communication through audio signals. It can encode and decode SOS messages and GPS coordinates into audio signals, allowing for communication in situations where traditional methods may not be available.
 
-## 🌟 Overview
+## Features
 
-**SONUS** is a survival-focused mobile application that transforms smartphones into:
-- **Emergency Whistles**
-- **SOS Broadcasters**
-- **Offline GPS Senders** via **SonoLink Protocol**
+- **Audio Signal Processing**
+  - Real-time audio recording and playback
+  - SOS message encoding/decoding
+  - GPS coordinate transmission via audio
+  - High-quality 32-bit float PCM format
 
-Built for disaster scenarios like earthquakes where communication networks are down, SONUS empowers survivors to alert nearby people and rescuers using **sound waves**.
+- **Location Services**
+  - GPS tracking with high accuracy
+  - Location broadcasting via audio signals
+  - Permission management
+  - Background location updates
 
----
+- **Cross-Platform Support**
+  - Android (API 21+)
+  - iOS (14.0+)
+  - Shared core functionality
 
-## 🚨 Key Features
+## Documentation
 
-- **Seismic Whistle Mode**  
-  Emits a loud, piercing whistle for manual rescue signaling.
+The project documentation is organized in the `docs` directory:
 
-- **Auto-SOS Broadcast**  
-  Sends automated SOS patterns to nearby devices using offline sound codes.
+- [Main Documentation](docs/README.md) - Overview and technical specifications
+- [Android Guide](docs/android.md) - Android-specific implementation details
+- [iOS Guide](docs/ios.md) - iOS-specific implementation details
 
-- **Sender & Receiver Mode**  
-  - **Sender:** Encodes and transmits GPS location using **audio frequencies**.
-  - **Receiver:** Listens, decodes, and displays the sender's coordinates.
-  - Powered by our custom **SonoLink** protocol.
-
-- **Rescue Beacon Flash**  
-  Strobe the flashlight in emergency patterns.
-
-- **Low Battery Mode**  
-  Optimized for minimal power consumption during critical hours.
-
-- **Shake Detection**  
-  Activate SOS mode by physically shaking the device.
-
----
-
-## ⚙️ Technical Highlights
-
-- **Full Native Development:**  
-  - Android (Java/Kotlin + C++)  
-  - iOS (Objective-C/Swift + C++)
-  
-- **Audio-Based Communication:**  
-  - Short-range (~3-10 meters)
-  - Completely offline (no Wi-Fi, no Bluetooth required)
-
-- **Cross-Platform Core:**  
-  Audio modulation/demodulation handled via a shared **C++ library** for efficiency and consistency.
-
----
-
-## 📡 SonoLink Protocol
-
-**SonoLink** is the custom low-level communication protocol developed for SONUS.  
-It enables sound-based transmission of small data payloads like GPS coordinates and SOS alerts.
-
-🔗 **[Full SonoLink Protocol Specification](./protocols/SonoLink-v1.0.md)**
-
----
-
-# 📁 Repo Structure
+## Project Structure
 
 ```
-/android/      -> Android native project
-/ios/          -> iOS native project
-/core/         -> C++ core sound processing
-/protocols/    -> Protocol documentation (SonoLink-v1.0.md)
-/docs/         -> Project documentation
-README.md
-LICENSE
+.
+├── android/                  # Android implementation
+│   ├── app/
+│   │   ├── src/
+│   │   │   └── main/
+│   │   │       ├── java/
+│   │   │       │   └── com/
+│   │   │       │       └── sonus/
+│   │   │       └── AndroidManifest.xml
+│   └── build.gradle
+├── ios/                      # iOS implementation
+│   ├── Sonus/
+│   │   ├── SonusApp.swift
+│   │   ├── AudioManager.swift
+│   │   ├── LocationManager.swift
+│   │   └── Info.plist
+│   └── Sonus.xcodeproj/
+├── docs/                     # Documentation
+│   ├── README.md
+│   ├── android.md
+│   └── ios.md
+└── README.md                 # This file
 ```
 
----
+## Requirements
 
-## 📄 Roadmap
+### Android
+- Android Studio
+- Android SDK 33
+- Kotlin 1.8.0
+- Gradle 7.4.2
 
-- [x] Define SonoLink v1.0
-- [ ] Implement native C++ core audio encoder/decoder
-- [ ] Integrate Sender/Receiver modes
-- [ ] Add multi-packet support (large messages)
-- [ ] Add optional encryption layer for secured communications
-- [ ] Open-source Beta release
+### iOS
+- Xcode 14.0+
+- Swift 5.0
+- iOS 14.0+
 
----
+## Installation
 
-## 🚀 Project Status
+### Android
+1. Clone the repository
+2. Open the project in Android Studio
+3. Sync Gradle files
+4. Build and run
 
-> **Currently in early active development.**  
-> Early beta versions expected soon!
+### iOS
+1. Clone the repository
+2. Open `Sonus.xcodeproj` in Xcode
+3. Select your development team
+4. Build and run
 
----
+## Usage
 
-## 🤝 Contributing
+### Sending SOS Signal
+1. Open the app
+2. Grant necessary permissions
+3. Press the SOS button
+4. Hold the device to transmit the signal
 
-Contributions are welcome!  
-We are especially looking for:
-- Audio engineers familiar with FSK/ASK modulation.
-- C++ developers for low-level optimization.
-- Mobile app testers with a focus on disaster recovery scenarios.
+### Broadcasting Location
+1. Enable location services
+2. Press the location broadcast button
+3. The app will encode and transmit your coordinates
 
-Please see `CONTRIBUTING.md` (to be added) for guidelines.
+### Receiving Signals
+1. Enable microphone access
+2. The app will automatically detect and decode incoming signals
+3. View decoded messages in the app interface
 
----
+## Contributing
 
-## 👨‍💻 Contributors
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-We would like to thank the following individuals for their contributions to this project:
+## License
 
-- **Argeolog** - For providing the original idea and inspiration via their [tweet](https://x.com/argeolog_/status/1916237137604981163). Their work on the "Düdüğüm" app, a React Native application for earthquake alerts, inspired this project.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- **Mehmet Turgay AKALIN** - [GitHub Profile](https://github.com/makalin)  
-  Developer, creator of SONUS and SonoLink protocol.  
-  Focused on building open, resilient, and innovative systems for real-world problems.
-  
----
+## Acknowledgments
 
-## How to Contribute
-If you'd like to contribute to this project, please check out our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
-
----
-
-## 🛡 License
-
-MIT License  
-Feel free to fork, build, improve, and save lives.
-
----
-
-## 📢 Stay tuned for updates!
+- Core Audio and Location services teams
+- Open source contributors
+- Test users and feedback providers
